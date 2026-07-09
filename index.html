@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlTag">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUTCHE PRODUCTS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+}
+
+.lang-switch{
+    text-align:center;
+    padding:10px;
+    background:#0d3d0d;
+}
+
+.lang-switch button{
+    background:white;
+    color:#1f6b1f;
+    border:none;
+    padding:8px 16px;
+    margin:0 5px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.lang-switch button.active{
+    background:gold;
+    color:#1f6b1f;
+}
+
+header{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1544829832-c8047d6b9d89?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+header h1{
+    font-size:60px;
+}
+
+header h2{
+    color:gold;
+    margin:15px 0;
+}
+
+.btn{
+    display:inline-block;
+    background:green;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:20px;
+}
+
+nav{
+    background:#1f6b1f;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 10%;
+}
+
+.section-title{
+    text-align:center;
+    color:#1f6b1f;
+    margin-bottom:30px;
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.card{
+    width:250px;
+    background:yellowgreen;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.contact{
+    background:whitesmoke;
+}
+
+footer{
+    background:#1f6b1f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="lang-switch">
+    <button id="btn-en" onclick="changeLanguage('en')">English</button>
+    <button id="btn-fr" onclick="changeLanguage('fr')">Français</button>
+</div>
+
+<header>
+    <h1 data-key="brand">NUTCHE</h1>
+    <h2 data-key="tagline">FARINE MON CHOIX</h2>
+    <h3 data-key="subtitle">ALL ABOUT COMPOSITE FLOUR</h3>
+
+    <p data-key="heroText">
+        Producing nutritious, healthy and affordable composite flour
+        from locally sourced agricultural products.
+    </p>
+
+    <a href="#about" class="btn" data-key="learnMore">Learn More</a>
+</header>
+
+<nav>
+    <a href="#about" data-key="navAbout">About</a>
+    <a href="#products" data-key="navProducts">Products</a>
+    <a href="#benefits" data-key="navBenefits">Benefits</a>
+    <a href="#contact" data-key="navContact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2 class="section-title" data-key="aboutTitle">About Us</h2>
+
+    <p data-key="aboutText">
+        NUTCHE specializes in the production and promotion
+        of high-quality composite flour made from maize, groundnuts,
+        sorghum, soybean and other nutritious ingredients. Our goal is to
+        improve nutrition, food security and value addition for smallholder farmers.
+    </p>
+</section>
+
+<section id="products">
+    <h2 class="section-title" data-key="productsTitle">Our Product</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <h3 data-key="tagline">FARINE MON CHOIX</h3>
+            <p data-key="productDesc">A composition of maize, soya, groundnuts and sorghum flour</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="benefits">
+    <h2 class="section-title" data-key="benefitsTitle">Why Choose Our Composite Flour?</h2>
+
+    <ul style="max-width:800px;margin:auto;">
+        <li data-key="benefit1">Rich in nutrients and protein</li>
+        <li data-key="benefit2">Supports local farmers</li>
+        <li data-key="benefit3">Affordable and healthy</li>
+        <li data-key="benefit4">Suitable for baking and cooking</li>
+        <li data-key="benefit5">Promotes food security</li>
+    </ul>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title" data-key="contactTitle">Contact Us</h2>
+
+    <p><strong data-key="bizNameLabel">Business Name:</strong> NUTCHE</p>
+    <p><strong data-key="emailLabel">Email:</strong> nutcheproducts@gmail.com</p>
+    <p><strong data-key="phoneLabel">Phone:</strong> +(229) 01 41 232945</p>
+    <p><strong data-key="addressLabel">Address:</strong> <span data-key="address">ADJARA MUNICIPALITY</span></p>
+</section>
+
+<footer>
+    <p data-key="footerText">
+        © 2026 NUTCHE FARINE MON CHOIX | ALL ABOUT COMPOSITE FLOUR
+    </p>
+</footer>
+
+<script>
+const translations = {
+    en: {
+        brand: "NUTCHE",
+        tagline: "FARINE MON CHOIX",
+        subtitle: "ALL ABOUT COMPOSITE FLOUR",
+        heroText: "Producing nutritious, healthy and affordable composite flour from locally sourced agricultural products.",
+        learnMore: "Learn More",
+        navAbout: "About",
+        navProducts: "Products",
+        navBenefits: "Benefits",
+        navContact: "Contact",
+        aboutTitle: "About Us",
+        aboutText: "NUTCHE specializes in the production and promotion of high-quality composite flour made from maize, groundnuts, sorghum, soybean and other nutritious ingredients. Our goal is to improve nutrition, food security and value addition for smallholder farmers.",
+        productsTitle: "Our Product",
+        productDesc: "A composition of maize, soya, groundnuts and sorghum flour",
+        benefitsTitle: "Why Choose Our Composite Flour?",
+        benefit1: "Rich in nutrients and protein",
+        benefit2: "Supports local farmers",
+        benefit3: "Affordable and healthy",
+        benefit4: "Suitable for baking and cooking",
+        benefit5: "Promotes food security",
+        contactTitle: "Contact Us",
+        bizNameLabel: "Business Name:",
+        emailLabel: "Email:",
+        phoneLabel: "Phone:",
+        addressLabel: "Address:",
+        address: "ADJARA MUNICIPALITY",
+        footerText: "© 2026 NUTCHE FARINE MON CHOIX | ALL ABOUT COMPOSITE FLOUR"
+    },
+    fr: {
+        brand: "NUTCHE",
+        tagline: "FARINE MON CHOIX",
+        subtitle: "TOUT SUR LA FARINE COMPOSEE",
+        heroText: "Production d'une farine composee nutritive, saine et abordable a partir de produits agricoles d'origine locale.",
+        learnMore: "En savoir plus",
+        navAbout: "A propos",
+        navProducts: "Produits",
+        navBenefits: "Avantages",
+        navContact: "Contact",
+        aboutTitle: "A propos de nous",
+        aboutText: "NUTCHE est specialisee dans la production et la promotion d'une farine composee de haute qualite a base de mais, d'arachides, de sorgho, de soja et d'autres ingredients nutritifs. Notre objectif est d'ameliorer la nutrition, la securite alimentaire et la valorisation pour les petits exploitants agricoles.",
+        productsTitle: "Notre produit",
+        productDesc: "Une composition de farine de mais, de soja, d'arachides et de sorgho",
+        benefitsTitle: "Pourquoi choisir notre farine composee ?",
+        benefit1: "Riche en nutriments et en proteines",
+        benefit2: "Soutient les agriculteurs locaux",
+        benefit3: "Abordable et saine",
+        benefit4: "Adaptee a la cuisson et a la patisserie",
+        benefit5: "Favorise la securite alimentaire",
+        contactTitle: "Contactez-nous",
+        bizNameLabel: "Nom de l'entreprise :",
+        emailLabel: "Email :",
+        phoneLabel: "Telephone :",
+        addressLabel: "Adresse :",
+        address: "COMMUNE D'ADJARA",
+        footerText: "© 2026 NUTCHE FARINE MON CHOIX | TOUT SUR LA FARINE COMPOSEE"
+    }
+};
+
+function changeLanguage(language) {
+    document.getElementById("htmlTag").lang = language;
+
+    const dict = translations[language] || translations.en;
+
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (dict[key] !== undefined) {
+            el.textContent = dict[key];
+        }
+    });
+
+    document.getElementById("btn-en").classList.toggle("active", language === "en");
+    document.getElementById("btn-fr").classList.toggle("active", language === "fr");
+}
+
+// Set initial active state on load
+document.addEventListener("DOMContentLoaded", () => changeLanguage("en"));
+</script>
+</body>
+</html>
