@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | NUTCHE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Farine Mon Choix: a composite flour blending maize, soya, groundnuts and sorghum for affordable, nutrient-dense family meals.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="lang-switch">
+    <button id="btn-en" onclick="changeLanguage('en')">English</button>
+    <button id="btn-fr" onclick="changeLanguage('fr')">Français</button>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">NUTCHE</span>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" data-page="index.html" data-key="navHome">Home</a>
+      <a href="about.html" data-page="about.html" data-key="navAbout">About</a>
+      <a href="products.html" data-page="products.html" data-key="navProducts">Products</a>
+      <a href="benefits.html" data-page="benefits.html" data-key="navBenefits">Benefits</a>
+      <a href="activities.html" data-page="activities.html" data-key="navActivities">Activities</a>
+      <a href="contact.html" data-page="contact.html" data-key="navContact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" onclick="toggleNav()">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-banner">
+    <div class="hero-eyebrow"><span class="bar"></span><span data-key="tagline">FARINE MON CHOIX</span></div>
+    <h1 data-key="productsBanner">Our Product</h1>
+    <p data-key="productsBannerText">One flour, four crops, a whole family nourished.</p>
+</div>
+
+<div class="content-area">
+<section id="products">
+    <h2 class="section-title" data-key="productsTitle">Our Product</h2>
+
+    <div class="card-grid products">
+        <div class="card">
+            <h3 data-key="tagline">FARINE MON CHOIX</h3>
+            <p data-key="productDesc">A composition of maize, soya, groundnuts and sorghum flour</p>
+        </div>
+    </div>
+
+    <div class="card-grid" style="margin-top:26px;">
+        <div class="card card-wide">
+            <h3 data-key="productLongTitle">Farine Mon Choix</h3>
+            <p data-key="productLong">Farine Mon Choix blends maize, soya, groundnuts and sorghum, four crops grown by smallholder farmers in Benin, into a single nutrient-dense flour. It is milled to be affordable for everyday households while delivering the protein, energy and micronutrients growing children and nursing mothers need most.</p>
+        </div>
+    </div>
+</section>
+</div>
+
+<footer>
+    <p data-key="footerText">© 2026 NUTCHE FARINE MON CHOIX | ALL ABOUT COMPOSITE FLOUR</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
