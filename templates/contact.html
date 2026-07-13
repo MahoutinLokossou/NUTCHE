@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('contact.title') }} — {{ t('site.name') }}{% endblock %}
+
+{% block content %}
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{{ t('site.name') }}</span>
+        <h1>{{ t('contact.title') }}</h1>
+        <p>{{ t('contact.intro') }}</p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          {% include "components/contact_form.html" %}
+        </div>
+
+        <div>
+          <h3>{{ t('contact.info.title') }}</h3>
+          <dl class="info-list">
+            <div>
+              <dt>{{ t('contact.info.address') }}</dt>
+              <dd>ADJARRA MUNICIPALITY, BENIN</dd>
+            </div>
+            <div>
+              <dt>{{ t('contact.info.phone') }}</dt>
+              <dd>+(299) 01 41 232945</dd>
+            </div>
+            <div>
+              <dt>{{ t('contact.info.email') }}</dt>
+              <dd> nutcheproducts@gmail.com </dd>
+            </div>
+            <div>
+              <dt>{{ t('contact.info.hours') }}</dt>
+              <dd>{{ t('contact.info.hours.value') }}</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

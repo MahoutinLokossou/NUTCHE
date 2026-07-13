@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('gallery.title') }} — {{ t('site.name') }}{% endblock %}
+
+{% block content %}
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{{ t('site.name') }}</span>
+        <h1>{{ t('gallery.title') }}</h1>
+        <p>{{ t('gallery.intro') }}</p>
+      </div>
+
+      <div class="gallery-filters">
+        <button data-filter="all" class="is-active">{{ t('gallery.filter.all') }}</button>
+        <button data-filter="production">{{ t('gallery.filter.production') }}</button>
+        <button data-filter="training">{{ t('gallery.filter.training') }}</button>
+        <button data-filter="products">{{ t('gallery.filter.products') }}</button>
+      </div>
+
+      <div class="gallery-grid">
+        <figure data-category="production">
+          <img src="{{ url_for('static', filename='images/gallery/production-01.jpg') }}" alt="Production">
+          <figcaption>{{ t('gallery.filter.production') }}</figcaption>
+        </figure>
+        <figure data-category="production">
+          <img src="{{ url_for('static', filename='images/gallery/production-02.jpg') }}" alt="Production">
+          <figcaption>{{ t('gallery.filter.production') }}</figcaption>
+        </figure>
+        <figure data-category="training">
+          <img src="{{ url_for('static', filename='images/gallery/formation-01.jpg') }}" alt="Formation">
+          <figcaption>{{ t('gallery.filter.training') }}</figcaption>
+        </figure>
+        <figure data-category="training">
+          <img src="{{ url_for('static', filename='images/gallery/formation-02.jpg') }}" alt="Formation">
+          <figcaption>{{ t('gallery.filter.training') }}</figcaption>
+        </figure>
+        <figure data-category="products">
+          <img src="{{ url_for('static', filename='images/products/pain-manioc-ble.jpg') }}" alt="Produits">
+          <figcaption>{{ t('gallery.filter.products') }}</figcaption>
+        </figure>
+        <figure data-category="products">
+          <img src="{{ url_for('static', filename='images/products/mil-mais.jpg') }}" alt="Produits">
+          <figcaption>{{ t('gallery.filter.products') }}</figcaption>
+        </figure>
+        <figure data-category="production">
+          <img src="{{ url_for('static', filename='images/gallery/production-03.jpg') }}" alt="Production">
+          <figcaption>{{ t('gallery.filter.production') }}</figcaption>
+        </figure>
+        <figure data-category="training">
+          <img src="{{ url_for('static', filename='images/gallery/consultation-01.jpg') }}" alt="Consultation">
+          <figcaption>{{ t('gallery.filter.training') }}</figcaption>
+        </figure>
+        <figure data-category="products">
+          <img src="{{ url_for('static', filename='images/products/sorgho.jpg') }}" alt="Produits">
+          <figcaption>{{ t('gallery.filter.products') }}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

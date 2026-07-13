@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ t('site.name') }} — {{ t('site.tagline') }}{% endblock %}</title>
+  <meta name="description" content="{{ t('hero.subtitle') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+  {% include "components/navbar.html" %}
+
+  <main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="container" style="padding-top: 2rem;">
+          {% for category, message in messages %}
+            <div class="alert alert--{{ 'success' if category == 'success' else 'error' }}">
+              {{ t(message) }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "components/footer.html" %}
+
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nutcheproducts@gmail.com" target="_blank" rel="noopener" class="fab" aria-label="{{ t('nav.contact') }}" title="{{ t('nav.contact') }}">✎</a>
+  <script src="{{ url_for('static', filename='js/carousel.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

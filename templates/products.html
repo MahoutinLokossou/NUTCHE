@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('products.title') }} — {{ t('site.name') }}{% endblock %}
+
+{% block content %}
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{{ t('site.name') }}</span>
+        <h1>{{ t('products.title') }}</h1>
+        <p>{{ t('products.intro') }}</p>
+      </div>
+
+      {% include "components/product_cards.html" %}
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nutcheproducts@gmail.com" target="_blank" rel="noopener" class="btn btn--primary">{{ t('products.request') }}</a>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

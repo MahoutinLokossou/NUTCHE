@@ -1,0 +1,28 @@
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="{{ url_for('home') }}" class="navbar__brand">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="{{ t('site.name') }}">
+      {{ t('site.name') }}
+    </a>
+
+    <nav class="navbar__links" data-nav-links>
+      <a href="{{ url_for('home') }}" class="{{ 'is-active' if request.endpoint == 'home' }}">{{ t('nav.home') }}</a>
+      <a href="{{ url_for('about') }}" class="{{ 'is-active' if request.endpoint == 'about' }}">{{ t('nav.about') }}</a>
+      <a href="{{ url_for('products') }}" class="{{ 'is-active' if request.endpoint == 'products' }}">{{ t('nav.products') }}</a>
+      <a href="{{ url_for('services') }}" class="{{ 'is-active' if request.endpoint == 'services' }}">{{ t('nav.services') }}</a>
+      <a href="{{ url_for('gallery') }}" class="{{ 'is-active' if request.endpoint == 'gallery' }}">{{ t('nav.gallery') }}</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nutcheproducts@gmail.com" target="_blank" rel="noopener" class="{{ 'is-active' if request.endpoint == 'contact' }}">{{ t('nav.contact') }}</a>
+    </nav>
+
+    <div class="navbar__actions">
+      {% set other_lang = 'en' if current_lang == 'fr' else 'fr' %}
+      <a class="lang-switch" href="{{ url_for('set_language', lang_code=other_lang) }}">
+        {{ t('lang.switch') }}
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nutcheproducts@gmail.com" target="_blank" rel="noopener" class="btn btn--primary">{{ t('nav.cta') }}</a>
+      <button class="navbar__toggle" data-nav-toggle aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

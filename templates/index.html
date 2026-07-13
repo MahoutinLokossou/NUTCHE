@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% include "components/hero.html" %}
+
+  <section class="section--alt">
+    <div class="container">
+      <div class="stats">
+        <div>
+          <div class="stat__value">120+</div>
+          <div class="stat__label">{{ t('home.stats.farmers') }}</div>
+        </div>
+        <div>
+          <div class="stat__value">850+</div>
+          <div class="stat__label">{{ t('home.stats.trained') }}</div>
+        </div>
+        <div>
+          <div class="stat__value">30</div>
+          <div class="stat__label">{{ t('home.stats.blends') }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FARINE</span>
+        <h2>{{ t('home.pillars.title') }}</h2>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card__index">01 — {{ t('home.pillar1.title') }}</div>
+          <h3>{{ t('home.pillar1.title') }}</h3>
+          <p class="card__text">{{ t('home.pillar1.text') }}</p>
+        </div>
+        <div class="card">
+          <div class="card__index">02 — {{ t('home.pillar2.title') }}</div>
+          <h3>{{ t('home.pillar2.title') }}</h3>
+          <p class="card__text">{{ t('home.pillar2.text') }}</p>
+        </div>
+        <div class="card">
+          <div class="card__index">03 — {{ t('home.pillar3.title') }}</div>
+          <h3>{{ t('home.pillar3.title') }}</h3>
+          <p class="card__text">{{ t('home.pillar3.text') }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <div class="grid-2" style="align-items: center;">
+        <div>
+          <span class="eyebrow">{{ t('home.why.title') }}</span>
+          <h2>{{ t('home.why.title') }}</h2>
+          <p>{{ t('home.why.text') }}</p>
+          <a href="{{ url_for('products') }}" class="btn btn--outline">{{ t('hero.cta_primary') }}</a>
+        </div>
+        <div>
+          <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="{{ t('home.why.title') }}" style="border-radius: 4px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{{ t('products.title') }}</span>
+        <h2>{{ t('products.title') }}</h2>
+        <p>{{ t('products.intro') }}</p>
+      </div>
+
+      {% include "components/product_cards.html" %}
+    </div>
+  </section>
+
+{% endblock %}

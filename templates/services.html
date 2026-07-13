@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('services.title') }} — {{ t('site.name') }}{% endblock %}
+
+{% block content %}
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{{ t('site.name') }}</span>
+        <h1>{{ t('services.title') }}</h1>
+        <p>{{ t('services.intro') }}</p>
+      </div>
+
+      <div class="service-block">
+        <div>
+          <h3>{{ t('services.training.title') }}</h3>
+          <p class="card__text">{{ t('services.training.text') }}</p>
+        </div>
+        <div class="hero__media" style="aspect-ratio: 4/3;">
+          <img src="{{ url_for('static', filename='images/gallery/formation-01.jpg') }}" alt="{{ t('services.training.title') }}">
+        </div>
+      </div>
+
+      <div class="service-block">
+        <div class="hero__media" style="aspect-ratio: 4/3;">
+          <img src="{{ url_for('static', filename='images/gallery/consultation-01.jpg') }}" alt="{{ t('services.consulting.title') }}">
+        </div>
+        <div>
+          <h3>{{ t('services.consulting.title') }}</h3>
+          <p class="card__text">{{ t('services.consulting.text') }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">{{ t('services.format.title') }}</span>
+          <h2>{{ t('services.format.title') }}</h2>
+          <ul class="format-list">
+            <li>{{ t('services.format1') }}</li>
+            <li>{{ t('services.format2') }}</li>
+            <li>{{ t('services.format3') }}</li>
+            <li>{{ t('services.format4') }}</li>
+          </ul>
+        </div>
+        <div class="card" style="align-self: start;">
+          <h3>{{ t('services.book') }}</h3>
+          <p class="card__text">{{ t('services.consulting.text') }}</p>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nutcheproducts@gmail.com" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top: 1rem;">{{ t('services.book') }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

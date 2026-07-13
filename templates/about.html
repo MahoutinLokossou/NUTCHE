@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t('about.title') }} — {{ t('site.name') }}{% endblock %}
+
+{% block content %}
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{{ t('site.name') }}</span>
+        <h1>{{ t('about.title') }}</h1>
+        <p>{{ t('about.intro') }}</p>
+      </div>
+
+      <div class="hero__media" style="aspect-ratio: 21/9; margin-bottom: 3rem;">
+        <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="{{ t('about.title') }}">
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>{{ t('about.mission.title') }}</h3>
+          <p class="card__text">{{ t('about.mission.text') }}</p>
+        </div>
+        <div class="card">
+          <h3>{{ t('about.vision.title') }}</h3>
+          <p class="card__text">{{ t('about.vision.text') }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{{ t('about.values.title') }}</span>
+        <h2>{{ t('about.values.title') }}</h2>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="background: transparent; border-color: rgba(251,248,242,0.2);">
+          <h3 style="color: var(--flour-pale);">{{ t('about.value1') }}</h3>
+        </div>
+        <div class="card" style="background: transparent; border-color: rgba(251,248,242,0.2);">
+          <h3 style="color: var(--flour-pale);">{{ t('about.value2') }}</h3>
+        </div>
+        <div class="card" style="background: transparent; border-color: rgba(251,248,242,0.2);">
+          <h3 style="color: var(--flour-pale);">{{ t('about.value3') }}</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{# Expects nothing from the caller — product data is defined here since it is
+   small and bilingual (labels come from translation keys). If the catalogue
+   grows, move this into a database table and loop over it instead. #}
+<div class="product-carousel">
+  <div class="product-carousel__track">
+
+    {% for i in (1, 2) %}  {# render twice so the marquee loops seamlessly #}
+    <article class="product-card">
+      <div class="product-card__media">
+        <img src="{{ url_for('static', filename='images/products/pain-manioc-ble.jpg') }}" alt="{{ t('product1.name') }}">
+      </div>
+      <div class="product-card__body">
+        <h3>{{ t('Farine Mon Choix') }}</h3>
+        <p class="product-card__desc">{{ t('compisite flour') }}</p>
+        <div class="product-card__ratio-label">{{ t('Composition') }}</div>
+        <div class="blend-bar">
+          <div class="blend-bar__seg--cassava" style="width: 55%;"></div>
+          <div class="blend-bar__seg--flour" style="width: 45%;"></div>
+        </div>
+        <div class="blend-bar__legend">
+          <span><i class="blend-bar__dot" style="background: var(--cassava);"></i> </span>
+          <span><i class="blend-bar__dot" style="background: var(--ink-soft);"></i> </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-card__media">
+        <img src="{{ url_for('static', filename='images/products/mil-mais.jpg') }}" alt="{{ t('product2.name') }}">
+      </div>
+      <div class="product-card__body">
+        <h3>{{ t('TAFSeN') }}</h3>
+        <p class="product-card__desc">{{ t('Triple Action for food security and Nutrition') }}</p>
+        <div class="product-card__ratio-label">{{ t('products.ratio_label') }}</div>
+        <div class="blend-bar">
+          <div class="blend-bar__seg--millet" style="width: 60%;"></div>
+          <div class="blend-bar__seg--flour" style="width: 40%;"></div>
+        </div>
+        <div class="blend-bar__legend">
+          <span><i class="blend-bar__dot" style="background: var(--millet);"></i> </span>
+          <span><i class="blend-bar__dot" style="background: var(--ink-soft);"></i> </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-card__media">
+        <img src="{{ url_for('static', filename='images/products/sorgho.jpg') }}" alt="{{ t('product3.name') }}">
+      </div>
+      <div class="product-card__body">
+        <h3>{{ t('Consultancy') }}</h3>
+        <p class="product-card__desc">{{ t('Advice on food security and Nutrition') }}</p>
+        <div class="product-card__ratio-label">{{ t('products.ratio_label') }}</div>
+        <div class="blend-bar">
+          <div class="blend-bar__seg--sorghum" style="width: 100%;"></div>
+        </div>
+        <div class="blend-bar__legend">
+          <span><i class="blend-bar__dot" style="background: var(--sorghum-light);"></i> </span>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+
+  </div>
+</div>

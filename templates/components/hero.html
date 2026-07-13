@@ -1,0 +1,32 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero__grid">
+      <div>
+        <span class="eyebrow">{{ t('hero.eyebrow') }}</span>
+        <h1>{{ t('hero.title') }}</h1>
+        <p class="hero__subtitle">{{ t('hero.subtitle') }}</p>
+
+        <div class="hero__actions">
+          <a href="{{ url_for('products') }}" class="btn btn--primary">{{ t('hero.cta_primary') }}</a>
+          <a href="{{ url_for('services') }}" class="btn btn--outline">{{ t('hero.cta_secondary') }}</a>
+        </div>
+
+        <div class="hero__blend">
+          <div class="hero__blend-label">{{ t('product1.name') }} — {{ t('products.ratio_label') }}</div>
+          <div class="blend-bar">
+            <div class="blend-bar__seg--cassava" style="width: 55%;"></div>
+            <div class="blend-bar__seg--flour" style="width: 45%;"></div>
+          </div>
+          <div class="blend-bar__legend">
+            <span><i class="blend-bar__dot" style="background: var(--cassava);"></i> </span>
+            <span><i class="blend-bar__dot" style="background: var(--ink-soft);"></i> </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <img src="{{ url_for('static', filename='images/hello.jpg') }}" alt="{{ t('hero.title') }}">
+      </div>
+    </div>
+  </div>
+</section>
