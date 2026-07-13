@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUTCHE | Farine Mon Choix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="NUTCHE Enterprise produces Farine Mon Choix, a nutritious composite flour made from maize, soya, groundnuts and sorghum grown in Benin.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="lang-switch">
+    <button id="btn-en" onclick="changeLanguage('en')">English</button>
+    <button id="btn-fr" onclick="changeLanguage('fr')">Français</button>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">NUTCHE</span>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" data-page="index.html" data-key="navHome">Home</a>
+      <a href="about.html" data-page="about.html" data-key="navAbout">About</a>
+      <a href="products.html" data-page="products.html" data-key="navProducts">Products</a>
+      <a href="benefits.html" data-page="benefits.html" data-key="navBenefits">Benefits</a>
+      <a href="activities.html" data-page="activities.html" data-key="navActivities">Activities</a>
+      <a href="contact.html" data-page="contact.html" data-key="navContact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" onclick="toggleNav()">&#9776;</button>
+  </div>
+</nav>
+
+<header class="hero" style="background-image: linear-gradient(rgba(30, 20, 10, 0.55), rgba(30, 20, 10, 0.55)), url('https://images.pexels.com/photos/33890100/pexels-photo-33890100.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+    <div class="hero-text">
+        <h1 data-key="brand">NUTCHE</h1>
+        <h2 data-key="familyTagline">Nutritional Choice of the Whole Family</h2>
+        <h3 data-key="tagline">FARINE MON CHOIX</h3>
+        <h4 data-key="subtitle">ALL ABOUT COMPOSITE FLOUR</h4>
+        <p data-key="heroText">Producing nutritious, healthy and affordable composite flour from locally sourced agricultural products.</p>
+        <a href="about.html" class="btn" data-key="learnMore">Learn More</a>
+    </div>
+    <div class="hero-bar">
+        <span>NUTCHE Enterprise · Benin</span>
+        <span><strong>nutcheproducts@gmail.com</strong></span>
+    </div>
+</header>
+
+<section class="quicklinks">
+    <h2 class="section-title" data-key="exploreTitle">Explore NUTCHE</h2>
+    <p class="section-subtitle" data-key="exploreSubtitle">Find out who we are, what we make and why it matters.</p>
+    <div class="card-grid">
+        <a href="about.html" class="quick-card">
+            <div class="icon-badge">🌾</div>
+            <h3 data-key="quickAboutTitle">About Us</h3>
+            <p data-key="quickAboutText">Who we are, our approach and our mission.</p>
+        </a>
+        <a href="products.html" class="quick-card">
+            <div class="icon-badge">🥣</div>
+            <h3 data-key="quickProductsTitle">Our Product</h3>
+            <p data-key="quickProductsText">Meet Farine Mon Choix, our composite flour.</p>
+        </a>
+        <a href="benefits.html" class="quick-card">
+            <div class="icon-badge">✅</div>
+            <h3 data-key="quickBenefitsTitle">Benefits</h3>
+            <p data-key="quickBenefitsText">Why families and farmers choose NUTCHE.</p>
+        </a>
+        <a href="activities.html" class="quick-card">
+            <div class="icon-badge">🤝</div>
+            <h3 data-key="quickActivitiesTitle">Activities</h3>
+            <p data-key="quickActivitiesText">How we work with communities and researchers.</p>
+        </a>
+        <a href="contact.html" class="quick-card">
+            <div class="icon-badge">✉️</div>
+            <h3 data-key="quickContactTitle">Contact</h3>
+            <p data-key="quickContactText">Reach out with questions or partnership ideas.</p>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p data-key="footerText">© 2026 NUTCHE FARINE MON CHOIX | ALL ABOUT COMPOSITE FLOUR</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | NUTCHE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Contact NUTCHE Enterprise in Adjarra Municipality, Benin, for questions about Farine Mon Choix composite flour.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="lang-switch">
+    <button id="btn-en" onclick="changeLanguage('en')">English</button>
+    <button id="btn-fr" onclick="changeLanguage('fr')">Français</button>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">NUTCHE</span>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" data-page="index.html" data-key="navHome">Home</a>
+      <a href="about.html" data-page="about.html" data-key="navAbout">About</a>
+      <a href="products.html" data-page="products.html" data-key="navProducts">Products</a>
+      <a href="benefits.html" data-page="benefits.html" data-key="navBenefits">Benefits</a>
+      <a href="activities.html" data-page="activities.html" data-key="navActivities">Activities</a>
+      <a href="contact.html" data-page="contact.html" data-key="navContact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" onclick="toggleNav()">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-banner">
+    <div class="hero-eyebrow"><span class="bar"></span><span data-key="tagline">FARINE MON CHOIX</span></div>
+    <h1 data-key="contactBanner">Contact Us</h1>
+    <p data-key="contactBannerText">We would love to hear from you.</p>
+</div>
+
+<div class="content-area">
+<section id="contact">
+    <h2 class="section-title" data-key="contactTitle">Contact Us</h2>
+
+    <div class="contact-grid">
+        <div class="contact-card">
+            <strong data-key="bizNameLabel">Business Name</strong>
+            NUTCHE
+        </div>
+        <div class="contact-card">
+            <strong data-key="emailLabel">Email</strong>
+            nutcheproducts@gmail.com
+        </div>
+        <div class="contact-card">
+            <strong data-key="phoneLabel">Phone</strong>
+            +(229) 01 41 232945
+        </div>
+        <div class="contact-card">
+            <strong data-key="addressLabel">Address</strong>
+            <span data-key="address">Adjarra Municipality, Benin</span>
+        </div>
+    </div>
+</section>
+</div>
+
+<footer>
+    <p data-key="footerText">© 2026 NUTCHE FARINE MON CHOIX | ALL ABOUT COMPOSITE FLOUR</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
