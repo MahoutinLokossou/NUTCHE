@@ -49,9 +49,3 @@ function initGalleryFilters() {
     });
   });
 }
-const toggle = document.querySelector(".navbar__toggle");
-const links = document.querySelector(".navbar__links");
-
-toggle.addEventListener("click", () => {
-    links.classList.toggle("active");
-});
